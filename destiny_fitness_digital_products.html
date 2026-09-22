@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FAEDEA" />
+  <title>Destiny Fitness — Digital Products</title>
+
+  <!--
+    DESTINY FITNESS — DIGITAL PRODUCTS
+
+    Checkout links supplied:
+    1. https://whop.com/checkout/plan_04bPz66rFH0xJ
+    2. https://whop.com/checkout/plan_42TWHXnJgTzDU
+    3. https://whop.com/checkout/plan_yaHFMmGDBx2Je
+    4. https://whop.com/checkout/plan_J4Xw53vgSCVXT
+    5. https://whop.com/checkout/plan_sjxyZ2Qwx7MMH
+
+    The first link is currently assigned to the 30 Day Glute Builder.
+    To change it, replace the href on the "Get the program" button below.
+  -->
+
+  <style>
+    :root{
+      --blush:#FAEDEA;
+      --rose:#DD7E92;
+      --deep-rose:#C4607A;
+      --gold:#C7A24E;
+      --ink:#2F2528;
+      --muted:#74676A;
+      --white:#FFFDFC;
+      --line:rgba(107,72,80,.13);
+      --glass:rgba(255,253,252,.64);
+      --shadow:0 24px 70px rgba(106,64,76,.16);
+      --radius-xl:34px;
+      --radius-lg:24px;
+      --radius-md:18px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(221,126,146,.20), transparent 27%),
+        radial-gradient(circle at 88% 8%, rgba(199,162,78,.13), transparent 23%),
+        linear-gradient(145deg,#fffaf8 0%,#faedea 50%,#fff8f5 100%);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.28;
+      background-image:
+        linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.18) 1px, transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(to bottom,black,transparent 68%);
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    .shell{
+      width:min(1180px, calc(100% - 36px));
+      margin:0 auto;
+      position:relative;
+      z-index:1;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:24px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .brand-mark{
+      width:40px;
+      height:40px;
+      border-radius:14px;
+      position:relative;
+      background:linear-gradient(145deg,#fff,#f7dfe4);
+      border:1px solid rgba(196,96,122,.18);
+      box-shadow:0 9px 26px rgba(120,69,82,.13);
+    }
+
+    .brand-mark::before,
+    .brand-mark::after{
+      content:"";
+      position:absolute;
+      border-radius:999px;
+      transform:rotate(-35deg);
+    }
+
+    .brand-mark::before{
+      width:22px;height:7px;
+      left:8px;top:12px;
+      background:linear-gradient(90deg,var(--deep-rose),#eaa4b2);
+    }
+
+    .brand-mark::after{
+      width:17px;height:5px;
+      right:7px;bottom:10px;
+      background:linear-gradient(90deg,var(--gold),#f1d494);
+    }
+
+    .nav-tag{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--muted);
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.40);
+      backdrop-filter:blur(14px);
+    }
+
+    .hero{
+      padding:72px 0 58px;
+      text-align:center;
+      position:relative;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.55);
+      border:1px solid var(--line);
+      color:var(--deep-rose);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      backdrop-filter:blur(14px);
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:7px;height:7px;
+      border-radius:50%;
+      background:var(--gold);
+      box-shadow:0 0 0 5px rgba(199,162,78,.10);
+    }
+
+    h1{
+      margin:22px auto 18px;
+      max-width:870px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(48px,8vw,92px);
+      line-height:.92;
+      font-weight:500;
+      letter-spacing:-.055em;
+    }
+
+    .gradient-text{
+      background:linear-gradient(115deg,#7f374b 5%,#d46683 44%,#b18736 92%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .hero p{
+      margin:0 auto;
+      max-width:620px;
+      font-size:clamp(16px,2vw,20px);
+      line-height:1.7;
+      color:var(--muted);
+    }
+
+    .hero-orbit{
+      width:550px;
+      height:550px;
+      position:absolute;
+      border:1px solid rgba(199,162,78,.19);
+      border-radius:50%;
+      left:50%;
+      top:-180px;
+      transform:translateX(-50%);
+      pointer-events:none;
+      opacity:.6;
+    }
+
+    .hero-orbit::before{
+      content:"";
+      width:11px;height:11px;
+      border-radius:50%;
+      position:absolute;
+      right:87px;
+      bottom:74px;
+      background:var(--gold);
+      box-shadow:0 0 28px 7px rgba(199,162,78,.35);
+    }
+
+    .section-label{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      margin:28px 0 18px;
+    }
+
+    .section-label::after{
+      content:"";
+      height:1px;
+      flex:1;
+      background:linear-gradient(90deg,var(--line),transparent);
+    }
+
+    .product-card{
+      display:grid;
+      grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      border:1px solid rgba(196,96,122,.15);
+      background:var(--glass);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(26px);
+      position:relative;
+    }
+
+    .product-visual{
+      min-height:510px;
+      padding:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 72% 14%,rgba(255,255,255,.92),transparent 24%),
+        linear-gradient(145deg,#f8dfe2 0%,#f0b8c5 44%,#c96e87 100%);
+    }
+
+    .product-visual::before{
+      content:"";
+      position:absolute;
+      width:430px;height:430px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.33);
+      left:-140px;top:-120px;
+      box-shadow:
+        0 0 0 38px rgba(255,255,255,.05),
+        0 0 0 76px rgba(255,255,255,.04);
+    }
+
+    .product-visual::after{
+      content:"";
+      position:absolute;
+      inset:auto -80px -120px auto;
+      width:310px;height:310px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(199,162,78,.34),rgba(199,162,78,0) 67%);
+      filter:blur(10px);
+    }
+
+    .cover{
+      width:min(340px,80%);
+      aspect-ratio:4/5;
+      border-radius:28px;
+      position:relative;
+      z-index:2;
+      padding:36px 30px;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      border:1px solid rgba(255,255,255,.34);
+      background:
+        linear-gradient(160deg,rgba(255,255,255,.24),rgba(255,255,255,.04)),
+        linear-gradient(140deg,#d8758c,#a94966);
+      box-shadow:
+        0 40px 60px rgba(95,42,57,.27),
+        inset 0 1px 0 rgba(255,255,255,.4);
+      transform:perspective(950px) rotateY(-8deg) rotateX(3deg);
+    }
+
+    .cover::after{
+      content:"";
+      position:absolute;
+      inset:12px;
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:20px;
+      pointer-events:none;
+    }
+
+    .cover-kicker{
+      font-size:11px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .cover h2{
+      margin:0;
+      font-family:Georgia,"Times New Roman",serif;
+      font-weight:500;
+      font-size:48px;
+      line-height:.94;
+      letter-spacing:-.04em;
+    }
+
+    .cover h2 span{
+      display:block;
+      color:#f8db9e;
+      font-style:italic;
+      font-size:.74em;
+      margin-top:8px;
+    }
+
+    .cover-bottom{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      font-size:12px;
+      line-height:1.45;
+      color:rgba(255,255,255,.84);
+    }
+
+    .cover-badge{
+      width:64px;height:64px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(255,255,255,.38);
+      background:rgba(255,255,255,.12);
+      backdrop-filter:blur(8px);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:20px;
+      color:#f8db9e;
+      flex:0 0 auto;
+    }
+
+    .product-copy{
+      padding:clamp(38px,6vw,72px);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .mini{
+      color:var(--deep-rose);
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      margin-bottom:16px;
+    }
+
+    .product-copy h3{
+      margin:0;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(36px,5vw,58px);
+      line-height:1;
+      letter-spacing:-.035em;
+      font-weight:500;
+    }
+
+    .product-copy .desc{
+      margin:18px 0 26px;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.7;
+      max-width:570px;
+    }
+
+    .benefits{
+      display:grid;
+      gap:10px;
+      margin:0 0 32px;
+      padding:0;
+      list-style:none;
+    }
+
+    .benefits li{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:14px;
+      color:#55474b;
+    }
+
+    .check{
+      width:24px;height:24px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      flex:0 0 auto;
+      background:rgba(196,96,122,.10);
+      border:1px solid rgba(196,96,122,.18);
+      color:var(--deep-rose);
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .buy-row{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .price{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+
+    .price strong{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:34px;
+      font-weight:500;
+      letter-spacing:-.03em;
+    }
+
+    .price span{
+      font-size:11px;
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .cta{
+      min-height:54px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      padding:0 24px;
+      border-radius:999px;
+      background:linear-gradient(120deg,#9e405c,#cf6d88 62%,#b59043);
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
+      box-shadow:0 16px 34px rgba(156,62,87,.25);
+      transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+    }
+
+    .cta:hover{
+      transform:translateY(-2px);
+      box-shadow:0 21px 42px rgba(156,62,87,.30);
+      filter:saturate(1.06);
+    }
+
+    .arrow{
+      width:26px;height:26px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:rgba(255,255,255,.15);
+    }
+
+    .coming{
+      padding:86px 0 92px;
+    }
+
+    .coming-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:24px;
+    }
+
+    .coming h4{
+      margin:0;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(30px,4vw,46px);
+      font-weight:500;
+      letter-spacing:-.03em;
+    }
+
+    .coming-head p{
+      margin:0;
+      max-width:430px;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    .future-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .future-card{
+      min-height:180px;
+      border-radius:var(--radius-lg);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.38);
+      backdrop-filter:blur(16px);
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .future-card::after{
+      content:"";
+      position:absolute;
+      width:110px;height:110px;
+      border-radius:50%;
+      right:-28px;bottom:-34px;
+      background:radial-gradient(circle,rgba(221,126,146,.18),transparent 70%);
+    }
+
+    .future-card small{
+      color:var(--deep-rose);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:10px;
+      font-weight:800;
+    }
+
+    .future-card strong{
+      display:block;
+      margin-top:54px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:22px;
+      font-weight:500;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0 34px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .footer-brand{
+      color:var(--ink);
+      font-weight:800;
+    }
+
+    @media (max-width:820px){
+      .hero{padding-top:48px}
+      .hero-orbit{width:430px;height:430px;top:-120px}
+      .product-card{grid-template-columns:1fr}
+      .product-visual{min-height:430px}
+      .coming-head{align-items:flex-start;flex-direction:column}
+      .future-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width:540px){
+      .shell{width:min(100% - 22px,1180px)}
+      .nav-tag{display:none}
+      .hero{padding:38px 0 40px}
+      .hero p{font-size:15px}
+      .product-visual{min-height:360px;padding:24px}
+      .cover{width:76%;padding:28px 24px}
+      .cover h2{font-size:38px}
+      .product-copy{padding:34px 26px 38px}
+      .buy-row{align-items:stretch}
+      .cta{width:100%}
+      footer{align-items:flex-start;flex-direction:column}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto!important;transition:none!important}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="shell">
+    <nav class="nav">
+      <a class="brand" href="#" aria-label="Destiny Fitness home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Destiny Fitness</span>
+      </a>
+      <span class="nav-tag">Digital Collection</span>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-orbit" aria-hidden="true"></div>
+      <span class="eyebrow">Destiny Fitness Exclusives</span>
+      <h1>Programs made for your <span class="gradient-text">next level.</span></h1>
+      <p>Focused digital programs designed to give you structure, direction, and a clear plan to follow.</p>
+    </header>
+
+    <main>
+      <div class="section-label">Available now</div>
+
+      <article class="product-card">
+        <div class="product-visual">
+          <div class="cover" aria-label="30 Day Glute Builder">
+            <div class="cover-kicker">Destiny Fitness</div>
+            <h2>30 Day<br>Glute <span>Builder</span></h2>
+            <div class="cover-bottom">
+              <div>Structured glute-focused<br>training for 30 days.</div>
+              <div class="cover-badge">30</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-copy">
+          <div class="mini">Featured program</div>
+          <h3>30 Day Glute Builder</h3>
+          <p class="desc">
+            A focused 30-day training plan built to help you train your glutes with more structure,
+            consistency, and purpose.
+          </p>
+
+          <ul class="benefits">
+            <li><span class="check">✓</span> Structured 30-day training plan</li>
+            <li><span class="check">✓</span> Progressive glute-focused workouts</li>
+            <li><span class="check">✓</span> Clear, easy-to-follow training guidance</li>
+          </ul>
+
+          <div class="buy-row">
+            <div class="price">
+              <strong>$19.95</strong>
+              <span>Digital program</span>
+            </div>
+
+            <a
+              class="cta"
+              href="https://whop.com/checkout/plan_04bPz66rFH0xJ"
+              target="_top"
+              rel="noopener"
+            >
+              Get the program
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <section class="coming">
+        <div class="coming-head">
+          <div>
+            <div class="section-label" style="margin-top:0">The collection</div>
+            <h4>More is coming.</h4>
+          </div>
+          <p>
+            New Destiny Fitness programs, guides, and focused training experiences will be added here as they launch.
+          </p>
+        </div>
+
+        <div class="future-grid" aria-label="Upcoming digital product categories">
+          <div class="future-card">
+            <small>Coming soon</small>
+            <strong>New Programs</strong>
+          </div>
+          <div class="future-card">
+            <small>Coming soon</small>
+            <strong>Training Guides</strong>
+          </div>
+          <div class="future-card">
+            <small>Coming soon</small>
+            <strong>Challenges</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="footer-brand">Destiny Fitness</span>
+      <span>Train with structure. Progress with purpose.</span>
+    </footer>
+  </div>
+</body>
+</html>
